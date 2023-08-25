@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Diarias</title>
+    <style>
+        /* Estilos CSS como en los ejemplos anteriores */
+        .data-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-content">
+            <h2>Operaciones Diarias</h2>
+            <button class="button" id="agregarDatos">Agregar Datos</button>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaRegistros"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Configuración de Firebase (asegúrate de reemplazar con tus valores)
+        const firebaseConfig = {
+            apiKey: "TU_API_KEY",
+            authDomain: "TU_AUTH_DOMAIN",
+            projectId: "TU_PROJECT_ID",
+            storageBucket: "TU_STORAGE_BUCKET",
+            messagingSenderId: "TU_MESSAGING_SENDER_ID",
+            appId: "TU_APP_ID"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        // Captura el botón y agrega un evento al hacer clic
+        const botonAgregar = document.getElementById("agregarDatos");
+        botonAgregar.addEventListener("click", agregarNuevoRegistro);
+
+        // Resto del código (como en los mensajes anteriores)
+        // ...
+
+    </script>
+</body>
+</html>
